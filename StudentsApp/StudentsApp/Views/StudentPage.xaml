@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentsApp.Views.StudentPage" Title="Информация о студенте">
+    <StackLayout>
+        <StackLayout x:Name="StudentStack">
+            <Label Text="Имя" />
+            <Entry Text="{Binding Name}" FontSize="Medium" />
+            <Label Text="Номер студенческого билета" />
+            <Entry Text="{Binding StudentIDNumber}" FontSize="Medium" />
+            <Label Text="Группа" />
+            <Entry Text="{Binding GroupNumber}" FontSize="Medium" />
+            <Label Text="Дата рождения" />
+            <Entry Text="{Binding DateOfBirth}" FontSize="Medium" />
+            <Label Text="Год поступления" />
+            <Entry Text="{Binding YearOfAdmission}" FontSize="Medium" />
+            <Label Text="Телефон" />
+            <Entry Text="{Binding Phone}" FontSize="Medium" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="Добавить" Command="{Binding ListViewModel.SaveStudentCommand}" CommandParameter="{Binding}" />
+            <Button Text="Удалить" Command="{Binding ListViewModel.DeleteStudentCommand}" CommandParameter="{Binding}" />
+            <Button Text="Назад" Command="{Binding Path=ListViewModel.BackCommand}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

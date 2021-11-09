@@ -1,0 +1,1 @@
+C:\Users\misch\source\repos\3\StudentsApp\StudentsApp\StudentsApp.UWP\StudentsApp.UWP.csproj;x86
